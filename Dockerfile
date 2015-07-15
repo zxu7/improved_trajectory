@@ -3,7 +3,7 @@ FROM ubuntu:12.04
 RUN apt-get update && apt-get install -q -y \
   wget \
   build-essential
-RUN apt-get install -y yasm
+RUN apt-get install -y yasm cmake
 
 RUN cd /opt && wget http://lear.inrialpes.fr/people/wang/download/ffmpeg-0.11.1.tar.bz2 \
   && tar xjvf ffmpeg-0.11.1.tar.bz2
@@ -13,4 +13,6 @@ RUN cd /opt && wget http://lear.inrialpes.fr/people/wang/download/OpenCV-2.4.2.t
   
 RUN cd /opt/ffmpeg-0.11.1 && ./configure && make && make install
 
+RUN mkdir /opt/OpenCV-2.4.2/build
+RUN cd /opt/OpenCV-2.4.2/build && cmake .. && make && make install
   
