@@ -10,6 +10,6 @@ RUN cd /opt && wget http://lear.inrialpes.fr/people/wang/download/ffmpeg-0.11.1.
 RUN cd /opt && wget http://lear.inrialpes.fr/people/wang/download/OpenCV-2.4.2.tar.bz2 \
   && tar xjvf OpenCV-2.4.2.tar.bz2
   
-RUN cd /opt && ls -l
+RUN cd /opt/ffmpeg-0.11.1 && ./configure && make && make install
 
   
