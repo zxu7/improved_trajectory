@@ -1,9 +1,9 @@
 FROM ubuntu:12.04
 
-RUN apt-get remove ffmpeg x264 libx264-dev
+RUN apt-get remove -y ffmpeg x264 libx264-dev
 
 RUN apt-get update
-RUN apt-get install -y build-essential wget checkinstall git cmake libfaac-dev \
+RUN apt-get install -y -q build-essential wget checkinstall git cmake libfaac-dev \
   libjack-jackd2-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev \
   libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev libvorbis-dev libx11-dev \
   libxfixes-dev libxvidcore-dev texi2html yasm zlib1g-dev
