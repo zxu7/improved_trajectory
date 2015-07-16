@@ -23,7 +23,7 @@ RUN apt-get install -y libgstreamer0.10-0 libgstreamer0.10-dev \
 RUN apt-get install -y vlc vlc-dbg vlc-data libvlccore5 libvlc5 libvlccore-dev \
   libvlc-dev tbb-examples libtbb-doc libtbb2 libtbb-dev libxine1-bin libxine1-ffmpeg libxine-dev 
 
-RUN apt-get install libmysqlcppconn-dev
+RUN apt-get install -y libmysqlcppconn-dev
 
 RUN cd /opt && wget ftp://ftp.videolan.org/pub/videolan/x264/snapshots/x264-snapshot-20121004-2245-stable.tar.bz2 \
   && tar xjvf x264-snapshot-20121004-2245-stable.tar.bz2
