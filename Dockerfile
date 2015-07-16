@@ -4,6 +4,11 @@ MAINTAINER Mahmudul Hasan <mhasa004@ucr.edu>
 RUN apt-get update
 RUN apt-get remove -y ffmpeg x264 libx264-dev
 
+RUN deb http://us.archive.ubuntu.com/ubuntu/ precise multiverse 
+RUN deb-src http://us.archive.ubuntu.com/ubuntu/ precise multiverse 
+RUN deb http://us.archive.ubuntu.com/ubuntu/ precise-updates multiverse 
+RUN deb-src http://us.archive.ubuntu.com/ubuntu/ precise-updates multiverse
+
 RUN apt-get install -y -q build-essential wget checkinstall git cmake libfaac-dev \
   libjack-jackd2-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev \
   libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev libvorbis-dev libx11-dev \
